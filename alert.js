@@ -1,1 +1,1 @@
-  alert ('Я JAVASCRIPT!');S
+  alert ('Я JAVASCRIPT!');
