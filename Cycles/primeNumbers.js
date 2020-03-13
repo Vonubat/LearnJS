@@ -16,7 +16,9 @@ let i;
 let j;
 n = +prompt ('"Этот код, который выводит все простые числа из интервала от 2 до n. Введите n','');
 outer: for (i = 2; i <= n; i++) {
+  debugger;
   for (j = 2; j < i; j++) {
+    debugger;
     if (i % j == 0) continue outer; 
   }
   alert( i ); // простое число
