@@ -28,3 +28,12 @@ function multiplyNumeric(obj) {
     };
   };
 };
+
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+console.log(menu);
+console.log(multiplyNumeric(menu));
