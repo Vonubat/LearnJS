@@ -10,17 +10,24 @@ P.S. Ноль 0 – считается числом, не останавлива
 */
 
 function sumInput() {
-  let arr = [];
-  let sum = 0;
-  let a = 0;
-  do {
-    a = +prompt('Введите число', '');
-    arr.unshift(a);
-  } while ((typeof a != "string") || (a != '') || (a != null));
-  for (let element of arr) {
-    sum += element;
+
+  let numbers = [];
+
+  while (true) {
+
+    let value = prompt("Введите число", 0);
+
+    // Прекращаем ввод?
+    if (value === "" || value === null || !isFinite(value)) break;
+
+    numbers.push(+value);
   }
-  return element;
+
+  let sum = 0;
+  for (let number of numbers) {
+    sum += number;
+  }
+  return sum;
 }
 
 alert(sumInput());
