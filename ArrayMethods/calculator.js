@@ -49,7 +49,7 @@ function Calculator() {
   }
 
   this.addMethod = function (name, func) {
-    this.methods.name = func;
+    this.methods[name] = func;
   };
 }
 
