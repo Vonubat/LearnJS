@@ -21,3 +21,6 @@ let range = {
 for (let num of range) {
   alert(num); // 1, затем 2, 3, 4, 5
 }
+
+let arr = Array.from(range);
+alert(arr); // 1,2,3,4,5
