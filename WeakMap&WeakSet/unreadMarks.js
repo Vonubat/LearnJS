@@ -17,3 +17,21 @@ P.S. Когда сообщение удаляется из массива messag
 P.P.S. Нам не следует модифицировать сами объекты сообщений, добавлять туда свойства. Если сообщения принадлежат какому-то другому коду, то это может привести к плохим последствиям.
 */
 
+let messages = [
+  { text: "Hello", from: "John" },
+  { text: "How goes?", from: "John" },
+  { text: "See you soon", from: "Alice" }
+];
+let readMessages = new WeakSet();
+// Читаем сообщения
+readMessages.add(messages[0]);
+readMessages.add(messages[1]);
+readMessages.add(messages[2]);
+// Проверка, прочитаны ли сообщение ранее
+readMessages.add(messages[0]);
+readMessages.add(messages[1]);
+readMessages.add(messages[2]);
+// Подтверждение визуальное о прочтение сообщения
+alert("Read message 0: " + readMessages.has(messages[0]));
+// Удаление сообщения
+messages.shift();
